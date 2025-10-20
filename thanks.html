@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You — Message Sent</title>
+  <meta name="description" content="Thank you — your message has been sent to Septiana Fajrin." />
+
+  <style>
+    :root{
+      --bg1: #0f172a; /* dark navy */
+      --bg2: #0b1220; /* deeper */
+      --accent: #4f46e5; /* indigo */
+      --accent-2: #06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.06);
+      --text: #e6eef8;
+      --muted: #9fb0c8;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(79,70,229,0.12), transparent),
+                  radial-gradient(1000px 400px at 90% 90%, rgba(6,182,212,0.08), transparent),
+                  linear-gradient(180deg,var(--bg1),var(--bg2));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .card{
+      width:100%;
+      max-width:920px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:18px;
+      padding:48px;
+      backdrop-filter: blur(8px) saturate(120%);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* Decorative blobs */
+    .card::before, .card::after{
+      content:"";
+      position:absolute;
+      filter: blur(60px);
+      opacity:0.55;
+      pointer-events:none;
+    }
+    .card::before{
+      width:420px;height:420px;
+      background: linear-gradient(45deg,var(--accent), transparent 60%);
+      top:-120px;left:-120px;
+      transform: rotate(10deg);
+    }
+    .card::after{
+      width:360px;height:360px;
+      background: linear-gradient(45deg,var(--accent-2), transparent 60%);
+      bottom:-120px;right:-90px;
+      transform: rotate(-10deg);
+    }
+
+    .logo-wrap{display:flex;gap:12px;align-items:center;justify-content:center;margin-bottom:12px}
+    .logo-badge{
+      width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;font-weight:700;color:white;font-size:20px;box-shadow:0 8px 20px rgba(79,70,229,0.18);
+    }
+
+    h1{margin:0;font-size:28px;letter-spacing:-0.02em}
+    p.lead{margin:14px 0 26px;color:var(--muted);font-size:15px;line-height:1.6}
+
+    /* Animated check circle */
+    .success-wrap{display:flex;align-items:center;justify-content:center;margin:18px 0 26px}
+    .check{
+      width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5), inset 0 -4px 20px rgba(0,0,0,0.25);
+      position:relative;
+      animation: pop .7s ease-out;
+    }
+    @keyframes pop{0%{transform:scale(.6)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+
+    .check svg{width:64px;height:64px}
+    .check .ring{
+      position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 6px rgba(79,70,229,0.08);opacity:0.9;animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse{0%{transform:scale(0.9);opacity:0.8}50%{transform:scale(1.08);opacity:0.5}100%{transform:scale(0.9);opacity:0.8}}
+
+    .details{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:6px}
+    .details .meta{background:var(--glass);padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);color:var(--muted);font-size:14px}
+
+    .btns{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:28px}
+    .btn{padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 8px 20px rgba(79,70,229,0.18)}
+    .btn-muted{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)}
+
+    .subtext{margin-top:20px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:640px){
+      .card{padding:28px;border-radius:14px}
+      h1{font-size:22px}
+      .check{width:92px;height:92px}
+    }
+
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="logo-wrap">
+      <div class="logo-badge">SF</div>
+      <div style="text-align:left">
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Message Delivered</div>
+        <div style="font-weight:600">Contact — Septiana Fajrin</div>
+      </div>
+    </div>
+
+    <h1>Thank you — your email has been sent</h1>
+    <p class="lead">Your message was successfully delivered to <strong>Septiana Fajrin</strong>. We appreciate you taking the time to get in touch. Expect a response within 1–3 business days.</p>
+
+    <div class="success-wrap">
+      <div class="check" aria-hidden>
+        <div class="ring"></div>
+        <!-- check icon -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden>
+          <circle cx="12" cy="12" r="11" stroke="rgba(255,255,255,0.06)" stroke-width="2"></circle>
+          <path d="M7 13.5l2.8 2.8L17 9.1" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="details">
+      <div class="meta">Recipient: <strong style="color:white;margin-left:6px">Septiana Fajrin</strong></div>
+      <div class="meta">Status: <strong style="color:white;margin-left:6px">Delivered</strong></div>
+      <div class="meta">Estimated Reply: <strong style="color:white;margin-left:6px">1–3 business days</strong></div>
+    </div>
+
+    <div class="btns">
+      <a class="btn btn-primary" href="https://code-wonder.github.io/myportofolio/" role="button">Back to Home</a>
+     
+    </div>
+
+    <p class="subtext">Tip: If you don't receive a reply in 3 business days, please check your spam folder or try contacting via another method.</p>
+  </main>
+</body>
+</html>
